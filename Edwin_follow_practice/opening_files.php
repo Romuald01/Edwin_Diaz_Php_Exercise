@@ -1,8 +1,10 @@
 <?php
 
-$file = "example.txt";
+$file = "Romuald.txt";
+ 
+$handle = fopen($file, 'w');
 
-$handle = fopen($file, 'W');
 fclose($handle);    
+
 
 ?>
