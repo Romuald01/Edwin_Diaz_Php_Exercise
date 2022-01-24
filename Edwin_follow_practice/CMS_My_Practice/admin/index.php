@@ -18,8 +18,6 @@
                     <small>Auhtor</small>
                 </h1>
 
-              
-                
             </div>
         </div>
         <!-- /.row -->
