@@ -15,8 +15,13 @@
                 
 <?php
 
+if(isset($_GET['p_id'])) {
+    $the_post_id = $_GET['p_id'];
+
+}
+
     
-    $query = "SELECT * FROM posts";
+    $query = "SELECT * FROM posts WHERE post_id = {$the_post_id} ";
     $select_all_posts_query = mysqli_query($connection, $query);
 
     while($row = mysqli_fetch_assoc($select_all_posts_query)) {
@@ -34,10 +39,10 @@
 
 <!-- First Blog Post -->
 <h2>
-    <a href="#"><?php echo $post_title?></a>
+    <a href="#"><?php echo $post_title ?></a>
 </h2>
 <p class="lead">
-    by <a href="index.php"><?php echo $post_author?></a>
+    by <a href="index.php"><?php echo $post_author ?></a>
 </p>
 <p><span class="glyphicon glyphicon-time"></span><?php echo $post_date?></p>
 <hr>
@@ -48,6 +53,65 @@
 
 <hr>
 <?php }?>
+<!-- Blog Comments -->
+<!-- Comments Form -->
+<div class="well">
+    <h4>Leave a Comment</h4>
+        <form action="">
+            <div class="form-group">
+                <textarea name="" id="" cols="30" rows="10">
+
+                </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</div>
+
+<hr>
+<!-- posted Comments -->
+
+<!-- Comment -->
+<div class="media">
+    <a class="pull-left" href="#">
+        <img class="media-object" src="http://placehod.it/64/64" alt="">
+         
+    </a>
+    <div class="media-body"> 
+      <h4 class="media-heading"> Start Bootstrap
+        <small>August 25, 2014 at 9:30 PM </small>
+      </h4>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est fugiat labore cupiditate facere? Earum, et, corrupti, molestiae temporibus libero voluptatem nihil atque illo in sunt aspernatur omnis tempore accusamus quasi!  
+    </div>
+</div>
+
+<!-- Comment -->
+<div class="media">
+    <a class="pull-left" href="#">
+        <img class="media-object" src="http://placehod.it/64/64" alt="">
+         
+    </a>
+    <div class="media-body"> 
+        <h4 class="media-heading"> Start Bootstrap
+          <small>August 25, 2014 at 9:30 PM </small>
+        </h4>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est fugiat labore cupiditate facere? Earum, et, corrupti, molestiae temporibus libero voluptatem nihil atque illo in sunt aspernatur omnis tempore accusamus quasi!  
+       <!-- Nested Comment -->
+        <div class="media">
+          <a class="pull-left" href="">
+              <img src="htpp://placehold.it/64/64" alt="">
+          </a>
+          <div class="media-body">
+              <h4 class="media-heading">Nested Start Bootstrap
+                <small>August 25, 2014 at 9:30 PM </small>
+              </h4>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse architecto quaerat totam magnam sapiente. Quia, est sapiente a quae totam architecto hic ea laudantium quam veniam pariatur quo tenetur error.
+
+          </div>
+        </div>
+        <!-- End Nested Comment -->  
+       </div>
+    </div>
+
 
 
 
@@ -75,4 +139,4 @@
      
 
 
-<?php include "includes/footer.php" ?>
+<?php include "includes/footer.php" ?>  
