@@ -11,3 +11,8 @@ body {
 footer {
     margin: 50px 0;
 }
+.small-square{
+    width: 20%;
+    height: 30%;
+    background-color: red;
+}

@@ -9,6 +9,8 @@
                                     <th>Tags</th>
                                     <th>Comments</th>
                                     <th>Dates</th> 
+                                    <th>Edit</th> 
+                                    <th>Delete</th> 
                             
                             </thead>
                             <tbody>
@@ -54,7 +56,6 @@
 
                              }
 
-
                             ?>
                             
                         </tbody>
@@ -67,12 +68,13 @@
 
                                       $query = "DELETE FROM posts WHERE post_id = {$the_post_id}";
                                       $delete_query = mysqli_query($connection, $query);
+                                      
+                                      header("Location: posts.php");
 
                                       if(!$delete_query) {
-                                              echo "the query didi not execute successfully";
+                                              echo "the query did not execute successfully" . mysqli_error($connection);
                                       }
-
-                                      
+       
                              } 
 
 

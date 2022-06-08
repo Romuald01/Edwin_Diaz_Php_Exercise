@@ -6,12 +6,12 @@
 
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container mt-">
 
-        <div class="row">
+        <div class="row mt-">
 
             <!-- Blog Entries Column -->
-            <div class="col-md-8">
+            <div class="col-md-8 mt-">
                 
 <?php
 
@@ -26,6 +26,17 @@
         $post_date = $row['post_date'];
         $post_image = $row['post_image']; 
         $post_content = substr($row['post_content'],0,100); 
+        $post_status = $row['post_status']; 
+
+        if($post_status !== 'published') {
+            echo "<h1 class='text-center'> NO POST SORRY. </h1>";
+        } else {
+        ?>
+
+
+
+
+
 //breaking out of php   ?>   
        
 <h1 class="page-header">
@@ -48,7 +59,7 @@
 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
 <hr>
-<?php }?>
+<?php } }?>
 
 
 

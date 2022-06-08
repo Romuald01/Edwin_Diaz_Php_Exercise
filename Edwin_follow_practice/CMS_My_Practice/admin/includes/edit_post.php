@@ -39,7 +39,7 @@
                  $select_image = mysqli_query($connection, $query);
 
                  while($row = mysqli_fetch_array($select_image)) {
-
+                    
                      $post_image = $row['post_image'];
                  } 
             }

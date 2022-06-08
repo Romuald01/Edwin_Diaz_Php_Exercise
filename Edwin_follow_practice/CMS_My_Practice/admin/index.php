@@ -15,7 +15,8 @@
                 
                 <h1 class="page-header">
                     Welcome to Admin
-                    <small>Auhtor</small>
+                    <!-- this is how we can know  who the user is, session is helpful -->
+                    <small><?php echo $_SESSION['username']; ?></small>
                 </h1>
 
             </div>

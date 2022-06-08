@@ -1,16 +1,15 @@
 
 <div class="col-md-4">
- 
-
-
-                <!-- Blog Search Well -->
-                <div class="well">
-
-                
-                <?php
+                <!-- <?php
                     $query = "SELECT * FROM categories LIMIT 3";
                     $select_categories_sidebar = mysqli_query($connection, $query);
-                ?>
+                ?> -->
+                
+
+                
+               
+                <!-- Blog Search Well -->
+                <div class="well">
                     <h4>Blog Search</h4>
                     <form action="search.php" method="POST">
                         <div class="input-group">
@@ -24,6 +23,26 @@
                     </form> <!--form search-->
                     <!-- /.input-group -->
                 </div>
+
+                 <!-- Login -->
+                 <div class="well">
+                    <h4>Blog Search</h4>
+                    <form action="includes/login.php" method="POST">
+                        <div class="form-group">
+                            <input name="username" type="text" class="form-control" placeholder="Enter username">
+                        </div>
+                        <div class="input-group">
+                            <input name="password" type="password" class="form-control" placeholder="Enter password">
+                            <span class="input-group-btn">
+                            <button class="btn btn-primary" name="login" type="submit">
+                          submit   
+                            </button>
+                            </span>
+                        </div>
+                    </form> <!--form search-->
+                    <!-- /.input-group -->
+                </div>
+                
    
 
     

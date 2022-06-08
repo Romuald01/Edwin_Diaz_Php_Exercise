@@ -16,12 +16,7 @@
                             <small>Auhtor</small>
        
                         </h1>
-                       
-                       
-                       
-                       
-                       
-                       <?php
+                        <?php
                             // include "includes/view_all_posts.php";
                             // checking for get request
                             if(isset($_GET['source'])) {
@@ -41,12 +36,12 @@
                                 include "includes/edit_post.php";
                                 break;
 
-                                // case '200';
-                                // echo "Nice 200";
-                                // break;
+                                case '200';
+                                echo "Nice 200";
+                                break;
                                 default:
                                 
-                                include "includes/view_all_posts.php";
+                                include "includes/view_all_comments.php";
 
                                 break;
                             }
@@ -58,7 +53,7 @@
             <!-- /.row -->
 
         </div>
-        <!-- /.container-fluid -->
+        <!-- /.container-fluid --> 
 
     </div>
 </div>

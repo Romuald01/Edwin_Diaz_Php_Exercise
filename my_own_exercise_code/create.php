@@ -15,7 +15,6 @@
 	<article class="main-content col-xs-8">
 	
 	
-	
 	<?php  
 
 	/*  Step 1 - Create a database in PHPmyadmin
