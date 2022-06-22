@@ -37,7 +37,7 @@
 
 
 
-//breaking out of php   ?>   
+<!-- breaking out of php   -->
        
 <h1 class="page-header">
     Page Heading
@@ -60,10 +60,6 @@
 
 <hr>
 <?php } }?>
-
-
-
-
 
 
                 <!-- Second Blog Post -->
